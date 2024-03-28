@@ -1,0 +1,7 @@
+.home{
+    height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.607) , rgba(0, 0, 0, 0.664) ) , url(../images/nasa.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

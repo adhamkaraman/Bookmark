@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/image.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="home overflow-auto">
+
+        <div class="d-flex justify-content-center align-items-center justify-content-around col-md-6 m-auto p-2 mt-4">
+            <i class="fa-solid fa-bookmark fa-lg ps-2" style="color: #ffffff;"></i>
+            <h1 class="fs-5 text-white p-0 m-0 fw-bold px-5 text-center"> Bookmark your favourite websites</h1>
+            <i class="fa-solid fa-bookmark fa-lg pe-2" style="color: #ffffff;"></i>
+        </div>
+
+        <div class="container mt-4 py-2">
+
+           <form>
+                <label for="siteName" class="fw-bold text-white"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                <input class="form-control my-2 mb-4" type="text" id="siteName" placeholder="Bookmark Name">
+
+                <label for="siteLink" class="fw-bold text-white"><i class="fa-solid fa-link"></i> Site URL</label>
+                <input class="form-control my-2" type="text" id="siteLink" placeholder="Website URL">
+
+                <div class="text-center mt-4 mb-5">
+                    <button onclick="addWebsite()" type="button" class="btn btn-dark btn-lg me-2" id="test">Submit</button>
+                    <button onclick="clearform()" type="button" class="btn btn-dark btn-lg">Clear Form</button>
+                </div>
+           </form>
+
+           <table class="table text-center table-dark table-striped table-bordered">
+
+                <thead>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                
+                <tbody id="tableBody">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Facebook</td>
+                        <td><a href="https://www.facebook.com/groups/ElzeroWebSchool" target="_blank"><button type="button" class="btn btn-primary"><i class="fa-solid fa-eye"></i> Visit</button></a></td>
+                        <td><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Delete</button></td>
+                    </tr> -->         
+                </tbody>
+
+           </table>
+
+
+        </div> 
+
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 fw-bold text-danger" id="exampleModalLabel">Alert <i class="fa-solid fa-triangle-exclamation"></i></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <p class="fw-bold">Site Name or Url is not valid, Please follow the rules below :-</p> 
+            <p class="text-danger fw-bold"><i class="fa-solid fa-circle-arrow-right"></i> Site name must contain at least 3 characters.</p>
+            <p class="text-danger fw-bold"><i class="fa-solid fa-circle-arrow-right"></i> Site URL must be a valid one.</p>  
+        </div>
+        <div class="modal-footer">
+          
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
